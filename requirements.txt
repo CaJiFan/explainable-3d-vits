@@ -1,0 +1,29 @@
+# Scientific Computing & Data Analysis
+numpy==1.24.6
+scipy
+scikit-learn
+matplotlib
+Pillow
+scikit-image
+
+# Specific to SimpleITK
+--find-links https://github.com/SimpleITK/SimpleITK/releases/tag/latest
+SimpleITK
+
+# Core Deep Learning Libraries
+torch
+lightning
+
+
+# TensorFlow (Choose one based on your needs, comment out the other)
+tensorflow
+
+# Medical Imaging Libraries
+antspyx
+antspynet
+
+# Other potential dependencies based on common usage (optional, uncomment and add if needed):
+# h5py
+# opencv-python
+# tqdm
+# pandas
