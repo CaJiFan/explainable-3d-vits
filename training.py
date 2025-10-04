@@ -233,3 +233,31 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+    
+    
+    
+# --- How to use this function in your main script ---
+# This part goes inside your main() function before you start training your classifier.
+# Make sure you have the corrected stratified split from a previous response.
+
+# Assume you have these variables from your main() function:
+# train_paths, train_labels, val_paths, val_labels, test_paths, test_labels, classes_dict, root_path
+
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# synthetic_paths, synthetic_labels = generate_deep_smote_data(
+#     train_paths, 
+#     train_labels, 
+#     classes_dict, 
+#     output_dir=f'{root_path}/data-synthetic',
+#     device=device
+# )
+# 
+# # Combine original training data with synthetic data
+# final_train_paths = train_paths + synthetic_paths
+# final_train_labels = train_labels + list(synthetic_labels) 
+#
+# # You would then use final_train_paths and final_train_labels to create your
+# # final train_dataset and train_loader for your MobileViT-3D classifier.
+# train_dataset = MRIDataset(final_train_paths, final_train_labels)
+# train_loader = data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
